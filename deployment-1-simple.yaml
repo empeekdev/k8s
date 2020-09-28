@@ -7,14 +7,14 @@ metadata:
 spec:
   selector:
     matchLabels:
-      project: 1
+      project: first
   template:
     metadata:
       labels:
-        project: 1
+        project: first
     spec:
       containers:
-        - name : 1-web
+        - name : first-web
           image: boxerwba/k8s_lecture
           ports:
             - containerPort: 80
