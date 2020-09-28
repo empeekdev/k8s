@@ -1,0 +1,23 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: my-web-deployment-replicas
+  labels:
+    app  : my-k8s-application
+    env  : prod
+    owner: Dima
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      project: 2
+  template:
+    metadata:
+      labels:
+        project: 2
+    spec:
+      containers:
+        - name : 2-web
+          image: boxerwba/k8s_lecture
+          ports:
+            - containerPort: 80
