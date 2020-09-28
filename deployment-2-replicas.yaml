@@ -10,14 +10,14 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      project: 2
+      project: second
   template:
     metadata:
       labels:
-        project: 2
+        project: second
     spec:
       containers:
-        - name : 2-web
+        - name : second-web
           image: boxerwba/k8s_lecture
           ports:
             - containerPort: 80
